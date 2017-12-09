@@ -1,0 +1,49 @@
+<div class="container" style=" background-color: #fff;width: 80%;margin-top: 20px;">
+    <div class="row">
+        <div class="col-sm-12 margin-top">
+            <div class="pull-right">
+                <button class="btn btn-primary" (click)="adminFormUser.userForm()">
+                        <i class="ion-plus m-right-xs"></i>Add User</button>
+                <button class="btn btn-primary" (click)="adminFormPost.adminForm()">
+                    <i class="ion-plus m-right-xs"></i>Add Post</button>
+                <admin-form-post (onParentEvent)="onParentEvent()" #adminFormPost></admin-form-post>
+                <admin-form-user (onParentEvent)="onParentEvent()" #adminFormUser></admin-form-user>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 margin-top">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th style="width:15%">Title</th>
+                        <th>Date</th>
+                        <th>Author</th>
+                        <th>Views</th>
+                        <th style="width:30%">Post</th>
+                        <th style="width:10%">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of postArr">
+                        <td>{{post.id}}</td>
+                        <td>{{post.title}}</td>
+                        <td>{{post.createdTime | date:"dd-MM-yyyy HH:mm:ss"}}</td>
+                        <td>{{post.author.id}}</td>
+                        <td>{{post.viewCount}}</td>
+                        <td>{{post.content}}</td>
+                        <td>
+                            <button type="button" class="btn btn-default" 
+                                (click)="adminFormPost.adminForm(post.id)">Edit
+                            </button>
+                            <button type="button" class="btn btn-default" 
+                                (click)="removeAdminForm(post.id)">Delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

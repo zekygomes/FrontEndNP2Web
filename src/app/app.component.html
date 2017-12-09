@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+            <ul class="nav navbar-nav">
+                <li><a [routerLink]="['blog']" routerLinkActive="active">Home</a></li>
+                <li><a [routerLink]="['admin']" routerLinkActive="active">Admin</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+<footer>
+    <div>
+        Ezequiel Gomes &copy; 2017 All Rights Freely, Do what you want 
+    </div>
+</footer>
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="fh5co-post">
+                <div class="fh5co-entry padding" *ngFor="let post of postArr">
+                    <img src="../assets/images/project-1.jpg" alt="Imagem aleatória">
+                    <div>
+                        <span class="fh5co-post-date">
+                            <span class="glyphicon glyphicon-time" style="font-size: 12px;padding: 1px 5px;">
+                                </span> {{post.createdTime | date:"dd-MM-yyyy HH:mm:ss"}}
+                        </span>
+                        <h2 class="text-overflow"><a [routerLink]="['/details',post.id]">{{post.title}}</a>
+                        </h2>
+                        <p class="content-overflow">{{post.content}}</p>
+                        <span class="fh5co-post-date">{{post.tag}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
