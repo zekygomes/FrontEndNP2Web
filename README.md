@@ -1,4 +1,4 @@
-# Blog-Fronted
+# Blog-Frontend
 
 Este é uma projeto para realização da 2ª Avaliação Parcial da disciplina T018 Programação para web I da Unifor.
 
