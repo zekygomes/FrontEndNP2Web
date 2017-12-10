@@ -4,7 +4,7 @@ Este é uma projeto para realização da 2ª Avaliação Parcial da disciplina T
 
 ## Importante
 ### Usuário padrão
-### Email: admin@admin.com
-### senha: teste123
+#### Email: admin@admin.com
+#### senha: teste123
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
